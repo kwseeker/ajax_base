@@ -1,0 +1,131 @@
+body { 
+    background: #1F394D url('../../images/yoga/bgGradient.png') repeat-x;
+    margin: 0; 
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+#schedulePane { 
+    background: url('../../images/yoga/wrapperBg-trans.png') no-repeat; 
+    height: 622px;
+    width: 865px; 
+    margin: 0 auto; /*上下外边距为0 左右浏览器自动计算，与relative搭配效果为居中*/
+    position: relative;
+}
+
+#logo {     /*相对于schedulePane布局*/
+    position: absolute;
+    top: 34px;
+    left: 30px;
+    width: 419px; 
+}
+
+#navigation {
+    position: absolute;
+    top: 151px;
+    left: 30px;
+    width: 155px;
+}
+/* #navigation img {
+    padding-bottom: 10px;
+} */
+
+#navigation a {
+    display: block; /*定义为块级元素显示*/
+    float: left;    /*浮动于左侧*/
+    height: 0;
+    width: 155px;
+    margin: 0 0 10px 0;
+    overflow: hidden;   /*溢出部分隐藏*/
+    padding: 140px 0 0 0;   
+    z-index: 200;
+}
+#navigation a#beginners {
+    background: url('../../images/yoga/beginnersBtn.png') no-repeat;
+}
+#navigation a#beginners.active {
+    background: url('../../images/yoga/beginnersBtnActive.png') no-repeat;
+}
+#navigation a#intermediate {
+    background: url('../../images/yoga/intermediateBtn.png') no-repeat;
+}
+#navigation a#intermediate.active {
+    background: url('../../images/yoga/intermediateBtnActive.png') no-repeat;
+}
+#navigation a#advanced {
+    background: url('../../images/yoga/advancedBtn.png') no-repeat;
+}
+#navigation a#advanced.active {
+    background: url('../../images/yoga/advancedBtnActive.png') no-repeat;
+}
+
+#tabs {
+    position: absolute;
+    top: 140px;
+    left: 190px; 
+    width: 650px;
+    height: 50px; 
+}
+
+#tabs a {
+    display: block;
+    float: left;
+    height: 0;
+    overflow: hidden;
+    padding: 140px 0 0 0;
+    width: 155px;
+    z-index: 200;
+}
+#tabs a#welcome.active {
+    background: url('../../images/yoga/welcomeTabActive.png') no-repeat; 
+}
+#tabs a#welcome.inactive {
+    background: url('../../images/yoga/welcomeTabInactive.png') no-repeat; 
+}
+#tabs a#beginners.active {
+    background: url('../../images/yoga/beginnersTabActive.png') no-repeat; 
+}
+#tabs a#beginners.inactive {
+    background: url('../../images/yoga/beginnersTabInactive.png') no-repeat; 
+}
+#tabs a#intermediate.active {
+    background: url('../../images/yoga/intermediateTabActive.png') no-repeat;
+}
+#tabs a#intermediate.inactive {
+    background: url('../../images/yoga/intermediateTabInactive.png') no-repeat;
+}
+#tabs a#advanced.active {
+    background: url('../../images/yoga/advancedTabActive.png') no-repeat; 
+}
+#tabs a#advanced.inactive {
+    background: url('../../images/yoga/advancedTabInactive.png') no-repeat; 
+}
+
+#content {
+    position: absolute;
+    text-align: center;
+    background-color: #6fb26f; 
+    top: 190px; 
+    left: 198px;
+    width: 615px;
+    height: 380px; 
+    padding: 10px;
+}
+
+table { 
+    border: 6px solid #1f394d; 
+    border-collapse: collapse; 
+    padding: 0 0 20px 0; 
+    width: 95%; 
+}
+
+td, th { 
+    border: 6px solid #1f394d; 
+    padding: 6px; 
+}
+
+form {
+    margin: 20px;
+}
