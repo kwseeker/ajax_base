@@ -15,7 +15,7 @@ a img {
 }
 
 #wrapper {
-    background: #750505 url('../images/bgWrapper.png') 8px 0 no-repeat; /*上下8px边距，左右0边距*/
+    background: #750505 url('../../images/inventory/bgWrapper.png') 8px 0 no-repeat; /*上下8px边距，左右0边距*/
     border: solid #300; /*border-style: solid border-color: #300*/
     border-width: 0 15px 15px 15px;
     height: 700px;
@@ -56,7 +56,7 @@ a img {
 #itemHat { left: 8px; position: absolute; top: 540px; }
 
 #detailsPane { 
-  background: #fff url('../images/bgDetailPane.png') 115px 91px no-repeat;
+  background: #fff url('../../images/inventory/bgDetailPane.png') 115px 91px no-repeat;
   border: 15px solid #300; 
   height: 208px; 
   left: 338px; 

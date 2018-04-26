@@ -1,0 +1,66 @@
+body {
+    background: url('../../images/registration/bgBody.png');
+    font-family: Trebuchet MS, Verdana, Helvetica, Arial, san-serif;
+    margin: 0;
+}
+
+#wrapper {
+    height: 500px;
+    width: 440px;
+    margin: 0 auto;
+    background: url('../../images/registration/bgContent.jpg') 0 -2px no-repeat;
+    padding: 150px 180px 0 180px;
+    color: #ddd;
+    position: relative;
+    text-align: left;
+}
+
+ul {
+    padding: 0;
+}
+li {
+    font-size: 12px;
+    list-style: none;
+    margin: 0 0 4px 0;
+}
+
+label {
+    float: left;    /*这两行控制label定长160px*/
+    width: 160px;
+    margin: 4px 6px 0 0;
+    text-align: right;
+}
+
+input, textarea {
+    border: 2px solid #1E3755;
+    padding: 0 2px;
+    width: 216px;
+}
+
+select {    /*select是从内部即224扣除border和padding的*/
+    border: 2px solid #1E3755;
+    padding: 0 2px;
+    width: 224px;
+}
+
+#register {
+    width: 100px;
+}
+
+/*  */
+#username {
+    width: 198px;
+    background: #fff url('../../images/registration/status.gif') 202px 0 no-repeat;
+    padding: 0 20px 0 2px;  /*html5规范顺时针 上右下左*/
+}
+#username.thinking {
+    background-position: 202px -19px;
+}
+#username.approved{
+    background-color: rgb(46, 168, 46);
+    background-position: 202px -35px;
+}
+#username.denied {
+    background-color: #FF8282;
+    background-position: 202px -52px;
+}
