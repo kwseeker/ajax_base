@@ -6,11 +6,21 @@ function initPage() {
     var buttons = document.getElementById("navigation").getElementsByTagName("a");
     for (var i=0; i<buttons.length; i++) {
         var currentBtn = buttons[i];
+        currentBtn.onclick = showTab;
+        // currentBtn.onmouseover = buttonOver;
+        // currentBtn.onmouseout = buttonOut;
         // currentBtn.onmouseover = showHint;
         // currentBtn.onmouseout = hideHint;
-        currentBtn.onclick = showTab;
-        currentBtn.onmouseover = buttonOver;
-        currentBtn.onmouseout = buttonOut;
+        // 上面的方式相当于添加属性而一个属性只能有一个值， addEventListener可以指定多个事件处理程序
+        // 多个事件处理函数执行顺序并不一定按注册顺序执行
+        // currentBtn.addEventListener("mouseover", showHint, false);
+        // currentBtn.addEventListener("mouseover", buttonOver, false);
+        // currentBtn.addEventListener("mouseout", hideHint, false);
+        // currentBtn.addEventListener("mouseout", buttonOut, false);
+        addEventHandler(currentBtn, "mouseover", showHint);
+        addEventHandler(currentBtn, "mouseover", buttonOver);
+        addEventHandler(currentBtn, "mouseout", hideHint);
+        addEventHandler(currentBtn, "mouseout", buttonOut);
     }
 
     var tabs = document.getElementById("tabs").getElementsByTagName("a");
@@ -61,13 +71,16 @@ function showTab() {
     request.send(null);
 }
 
-function showHint() {
+function showHint(e) {
     console.log("function showHint called");
     if(!welcomePaneShowing) {
         return;
     }
     var hintText;
-    switch(this.title) {
+
+    var target = getActivatedObject(e); // 通过Event对象获取target
+    switch(target.title) {
+    // switch(this.title) {             // this 获取激活的target
         case "beginners":
             hintText = "Just getting started? Come join us!";
             break;
