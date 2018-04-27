@@ -1,13 +1,15 @@
 <?php
 
-$takenUsernames = array ('bill', 'ted');
+$takenUsernames = array ('bill', 'ted', 'sam');
 
-sleep(2);
+sleep(1);
 
-if (!in_array( $_REQUEST['username'], $takenUsernames )) {
-	echo 'okay';
-} else {
+if ($_REQUEST['username'] == '') {
 	echo 'denied';
+} else if (in_array( $_REQUEST['username'], $takenUsernames )) {
+	echo 'denied';
+} else {
+	echo 'okay';
 }
 
 ?>

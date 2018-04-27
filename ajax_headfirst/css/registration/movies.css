@@ -9,11 +9,13 @@ body {
     width: 440px;
     margin: 0 auto;
     background: url('../../images/registration/bgContent.jpg') 0 -2px no-repeat;
-    padding: 150px 180px 0 180px;
+    padding: 120px 180px 0 180px;
     color: #ddd;
     position: relative;
     text-align: left;
 }
+
+h1 { font-size: 26px; }
 
 ul {
     padding: 0;
@@ -63,4 +65,40 @@ select {    /*select是从内部即224扣除border和padding的*/
 #username.denied {
     background-color: #FF8282;
     background-position: 202px -52px;
+}
+
+#password1 {
+    width: 198px;
+    background: #fff url('../../images/registration/status.gif') 202px 0 no-repeat;
+    padding: 0 20px 0 2px;  /*html5规范顺时针 上右下左*/
+}
+#password1.thinking {
+    background-position: 202px -19px;
+}
+#password1.approved{
+    background-color: rgb(46, 168, 46);
+    background-position: 202px -35px;
+}
+#password1.denied {
+    background-color: #FF8282;
+    background-position: 202px -52px;
+}
+
+p.tip {  
+    color: red;
+    font-size: 10px;
+    font-style: italic;
+}
+
+#coverBar {
+    height: 115px;
+    left: 182px;
+    overflow: hidden;   /*超出部分隐藏*/
+    position: absolute;
+    top: 490px;
+    width: 440px;
+}
+#coverBar img {
+    position: absolute;
+    top: 0;
 }
